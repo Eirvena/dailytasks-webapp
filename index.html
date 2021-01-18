@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container flex f-center">
+            <div class="container-1 col-half slide-in">
+                <div class="block">
+                    <h1 class="page-title">Plan your day in seconds!</h1>
+                    <p class="page-subtitle">Add your tasks for the day, and update as you finish.</p>
+                </div>
+                <div class="sub-block" style="display: none;">
+                    <div id="text"></div>
+                    <h2 class="info-msg"><span id="num-tasks" class="highlight">0</span> out of <span id="total-tasks" class="highlight"></span> tasks completed.</h2>
+                </div>
+                <button class="primary-btn">Add new task</button>
+            </div>
+            <div class="container-2 flex f-center f-column col-half">
+                <div class="caret"> 
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 20C40 8.96 31.04 0 20 0C8.96 0 0 8.96 0 20C0 31.04 8.96 40 20 40C31.04 40 40 31.04 40 20ZM16 20L24 12L24 28L16 20Z" fill="#0083FF"/>
+                    </svg>    
+                </div>
+                <div class="overflow-y col-full">
+                    <ul>
+                        <li id="add-row" class="row flex f-column">
+                            <input class="title" placeholder="Title"></input>
+                            <textarea class="text" placeholder="Description"></textarea>
+                            <div class="actions flex f-end">
+                                <span class="done">
+                                    Done
+                                    <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.1312 1.1566L13.9183 0L8.46452 5.2006L9.67742 6.3572L15.1312 1.1566ZM18.7785 0L9.67742 8.6786L6.08172 5.25802L4.86882 6.41462L9.67742 11L20 1.1566L18.7785 0ZM0 6.41462L4.8086 11L6.02151 9.8434L1.22151 5.25802L0 6.41462Z" fill="white"/>
+                                    </svg>                                
+                                </span>
+                                <span class="delete flex f-center">
+                                    <svg width="14" height="18" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.714286 10.6667C0.714286 11.4 1.35714 12 2.14286 12H7.85714C8.64286 12 9.28571 11.4 9.28571 10.6667V2.66667H0.714286V10.6667ZM2.47143 5.92L3.47857 4.98L5 6.39333L6.51429 4.98L7.52143 5.92L6.00714 7.33333L7.52143 8.74667L6.51429 9.68667L5 8.27333L3.48571 9.68667L2.47857 8.74667L3.99286 7.33333L2.47143 5.92ZM7.5 0.666667L6.78571 0H3.21429L2.5 0.666667H0V2H10V0.666667H7.5Z" fill="white"/>
+                                    </svg>                                
+                                </span>
+                                <span class="add flex f-center">Add                       
+                                    <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.1312 1.1566L13.9183 0L8.46452 5.2006L9.67742 6.3572L15.1312 1.1566ZM18.7785 0L9.67742 8.6786L6.08172 5.25802L4.86882 6.41462L9.67742 11L20 1.1566L18.7785 0ZM0 6.41462L4.8086 11L6.02151 9.8434L1.22151 5.25802L0 6.41462Z" fill="white"/>
+                                    </svg>         
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="task-list" class="col-full"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
